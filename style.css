@@ -78,7 +78,7 @@ a:hover{
     color: #ffffff;
 }
 
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: 1200px) {
         #menu{
             display: none;
             color: #ffffff;
