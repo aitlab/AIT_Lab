@@ -1,4 +1,3 @@
-
 .menu {
     display: inline;
     float: right;
@@ -21,10 +20,13 @@ a:hover{
     height: auto;
 }
 
-.BIGRLAB{
-    text-align: right;
+.AITLAB{
+    text-align: left;
 }
 
+.CenterFrame{
+    text-align: center;
+}
 
 .RESEARCH_TOPICS{
     background: #1d4e98;
@@ -57,25 +59,40 @@ a:hover{
 
 .left_frame{
     float: left;
-    width: auto;
+    width: 40%;
+    
 }
 .right_frame{
     float: right;
-    margin: 5%;
-    width: auto;
+    margin-left: 5%;
+    width: 40%;
 }
 .teacher_frame{
     width: 100%;
 }
 
+.AITLAB_TRELLO
+{
+	background: #1d4e98;
+    color: #ffffff;
+	text-align: center;
+}
+
+.AITLAB_TRELLO a
+{
+    color: #ffffff;
+	text-align: center;
+	cursor: pointer;
+}
+
 .footer{
     width: 100%;
     height: 80px;
-    background: #1d4e98;
+    background: #ffffff;
 }
 .footer_p{
     text-align: center;
-    color: #ffffff;
+    color: #000000;
 }
 
     @media only screen and (max-width: 1200px) {
@@ -89,9 +106,10 @@ a:hover{
         .menu_icon{
             display: block;
             float: right;
-            width:5%;
-            height: 5%;
-            margin:5px;
+            width:8%;
+            height: 8%;
+            margin-right:15px;
+			margin-bottom:15px;
         }
 
 
