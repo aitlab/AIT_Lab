@@ -28,7 +28,7 @@ a:hover{
 }
 
 .CenterFrame{
-    text-align: center;
+    text-align: left;
 }
 
 .RESEARCH_TOPICS{
@@ -62,16 +62,16 @@ a:hover{
 
 .left_frame{
     float: left;
-    width: 40%;
+    width: 48%;
     
 }
 .right_frame{
     float: right;
-    margin-left: 5%;
-    width: 40%;
+    margin-left: 1%;
+    width: 48%;
 }
 .teacher_frame{
-    width: 100%;
+    width: 85%;
 }
 
 .AITLAB_TRELLO
