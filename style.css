@@ -1,8 +1,10 @@
 .menu {
     display: inline;
     float: right;
-    padding-left: 1%;
+    padding-left: 1.5%;
     cursor: pointer;
+    font-size:35.5px;
+    line-height:35.5px;
 }
 
 
@@ -27,13 +29,28 @@ a:hover{
     text-align: left;
 }
 
-.CenterFrame{
+.CenterFrame01{
     text-align: left;
+    font-size: 30.5px;
+    
 }
+
+.CenterFrame02{
+    text-align: left;
+    font-size: 18.5px;
+}
+
+.CenterFrame03{
+    text-align: left;
+    font-size: 22.5px;
+}
+
+
 
 .RESEARCH_TOPICS{
     background: #1d4e98;
     color: #ffffff;
+    font-size: 22.5px;
     
 }
 
@@ -54,6 +71,7 @@ a:hover{
 
 .MEMBERS1{
     display: block;
+    font-size: 20.5px;
 }
 
 .MEMBERS2{
@@ -94,14 +112,23 @@ a:hover{
     background: #ffffff;
 }
 .footer_p{
+
+    font-size: 20.5px;
     text-align: center;
-    color: #000000;
+    color: #0662ca;
 }
+
+.back_top{
+    font-size:35.5px;
+    float:right;
+   
+}
+
 
     @media only screen and (max-width: 1200px) {
         #menu{
             display: none;
-            color: #ffffff;
+            color: #dbc6c6;
         }
         #menu_phone{
             display: block;
@@ -118,6 +145,7 @@ a:hover{
 
         .MEMBERS1{
             display: none;
+         
         }
         
         .MEMBERS2{
@@ -126,6 +154,7 @@ a:hover{
         
         
     }
+
     
 
 
