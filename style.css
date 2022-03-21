@@ -50,7 +50,8 @@ a:hover{
 .RESEARCH_TOPICS{
     background: #1d4e98;
     color: #ffffff;
-    font-size: 22.5px;
+    font-size: 23.5px;
+    line-height: 3.75rem;
     
 }
 
@@ -174,4 +175,15 @@ a:hover{
         background-color: rgb(35, 43, 71); /* Add a dark-grey background on hover */
       }
 
+div.container_button{
+    
+    color:white;
+    position:fixed;
+    top:0;
+    width:100%; 
+    height:5vh;
+    background: rgb(235, 235, 255);
+    z-index: 99;
+    
 
+}
