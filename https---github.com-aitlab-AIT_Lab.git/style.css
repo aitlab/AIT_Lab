@@ -1,160 +1,169 @@
 .menu {
-    display: inline;
-    float: right;
-    padding-left: 1.5%;
-    cursor: pointer;
-    font-size:35.5px;
-    line-height:35.5px;
+  display: inline;
+  float: right;
+  padding-left: 1.5%;
+  cursor: pointer;
+  font-size: 35.5px;
+  line-height: 35.5px;
 }
 
-
-
-
-a{
-    text-decoration:none;
-    color: black;
+a {
+  text-decoration: none;
+  color: rgba(0, 110, 255, 0.75);
 }
 
-a:hover{
-    text-decoration:none;
-    color: black;
+a:hover {
+  text-decoration: none;
+  color: black;
 }
 
-.header_img{
-    width: 100%;
-    height: auto;
+.header_img {
+  width: 100%;
+  height: auto;
 }
 
-.AITLAB{
-    text-align: left;
+.AITLAB {
+  text-align: left;
 }
 
-.CenterFrame01{
-    text-align: left;
-    font-size: 30.5px;
-    
+.CenterFrame01 {
+  text-align: left;
+  font-size: 30.5px;
 }
 
-.CenterFrame02{
-    text-align: left;
-    font-size: 18.5px;
+.CenterFrame02 {
+  text-align: left;
+  font-size: 18.5px;
 }
 
-.CenterFrame03{
-    text-align: left;
-    font-size: 22.5px;
+.CenterFrame03 {
+  text-align: left;
+  font-size: 22.5px;
 }
 
-
-
-.RESEARCH_TOPICS{
-    background: #1d4e98;
-    color: #ffffff;
-    font-size: 22.5px;
-    
+.RESEARCH_TOPICS {
+  background: #1d4e98;
+  color: #ffffff;
+  font-size: 23.5px;
+  line-height: 3.75rem;
 }
 
-#menu{
-    display: block;
+#menu {
+  display: block;
 }
-#menu_phone{
-    display: none;
+#menu_phone {
+  display: none;
 }
 
-.menu_icon{
-    display: none;
+.menu_icon {
+  display: none;
 }
 
 .navbar {
-    width: 100%;
+  width: 100%;
 }
 
-.MEMBERS1{
-    display: block;
-    font-size: 20.5px;
+.MEMBERS1 {
+  display: block;
+  font-size: 20.5px;
 }
 
-.MEMBERS2{
+.MEMBERS2 {
+  display: none;
+}
+
+.left_frame {
+  float: left;
+  width: 48%;
+}
+.right_frame {
+  float: right;
+  margin-left: 1%;
+  width: 48%;
+}
+.teacher_frame {
+  width: 85%;
+}
+
+.AITLAB_TRELLO {
+  background: #1d4e98;
+  color: #ffffff;
+  text-align: center;
+}
+
+.AITLAB_TRELLO a {
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.footer {
+  width: 100%;
+  height: 80px;
+  background: #ffffff;
+}
+.footer_p {
+  font-size: 20.5px;
+  text-align: center;
+  color: #0662ca;
+}
+
+.back_top {
+  font-size: 35.5px;
+  float: right;
+}
+
+@media only screen and (max-width: 1200px) {
+  #menu {
     display: none;
-}
-
-.left_frame{
-    float: left;
-    width: 48%;
-    
-}
-.right_frame{
+    color: #dbc6c6;
+  }
+  #menu_phone {
+    display: block;
+  }
+  .menu_icon {
+    display: block;
     float: right;
-    margin-left: 1%;
-    width: 48%;
-}
-.teacher_frame{
-    width: 85%;
-}
+    width: 8%;
+    height: 8%;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
 
-.AITLAB_TRELLO
-{
-	background: #1d4e98;
-    color: #ffffff;
-	text-align: center;
-}
+  .MEMBERS1 {
+    display: none;
+  }
 
-.AITLAB_TRELLO a
-{
-    color: #ffffff;
-	text-align: center;
-	cursor: pointer;
+  .MEMBERS2 {
+    display: block;
+  }
 }
-
-.footer{
-    width: 100%;
-    height: 80px;
-    background: #ffffff;
-}
-.footer_p{
-
-    font-size: 20.5px;
-    text-align: center;
-    color: #0662ca;
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #0a94e4; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 20px; /* Increase font size */
 }
 
-.back_top{
-    font-size:35.5px;
-    float:right;
-   
+#myBtn:hover {
+  background-color: rgb(35, 43, 71); /* Add a dark-grey background on hover */
 }
 
-
-    @media only screen and (max-width: 1200px) {
-        #menu{
-            display: none;
-            color: #dbc6c6;
-        }
-        #menu_phone{
-            display: block;
-        }
-        .menu_icon{
-            display: block;
-            float: right;
-            width:8%;
-            height: 8%;
-            margin-right:15px;
-			margin-bottom:15px;
-        }
-
-
-        .MEMBERS1{
-            display: none;
-         
-        }
-        
-        .MEMBERS2{
-            display: block;
-        }
-        
-        
-    }
-
-    
-
-
+div.container_button {
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 4.75vh;
+  background: white;
+  z-index: 99;
+}
