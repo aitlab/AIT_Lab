@@ -129,7 +129,8 @@ a:hover{
     @media only screen and (max-width: 1200px) {
         #menu{
             display: none;
-            color: #dbc6c6;
+	    color: #6fa8dc;
+            /*color: #dbc6c6;*/
         }
         #menu_phone{
             display: block;
