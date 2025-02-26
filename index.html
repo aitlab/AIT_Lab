@@ -5,67 +5,54 @@
     <title>先進資訊技術實驗室AITLAB</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-      crossorigin="anonymous"
-    ></script>
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" 
-        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" 
-       integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
-    <script 
-       src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" 
-       integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" 
-       crossorigin="anonymous">
-    </script>
+    <!-- 外部 CSS 與 JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css"
+          integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+          crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+            integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+            crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="image/favicon.ico" type="image/x-icon" />
   </head>
-
   <body>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-
+    
     <div class="header">
       <br />
       <div id="menu">
         <div class="container-fluid container_button">
           <ul>
-            <li class="menu"><a href="#AITLAB_TRELLO">  TRELLO  </a></li>
-            <li class="menu"><a href="#MEMBERS1">  MEMBERS  </a></li>
-            <li class="menu"><a href="#RESEARCH_TOPICS">  RESEARCH  </a></li>
-            <li class="menu"><a href="#AITLAB">  AITLAB  </a></li>
+            <li class="menu"><a href="#AITLAB_TRELLO">TRELLO</a></li>
+            <li class="menu"><a href="#MEMBERS1">MEMBERS</a></li>
+            <li class="menu"><a href="#RESEARCH_TOPICS">RESEARCH</a></li>
+            <li class="menu"><a href="#AITLAB">AITLAB</a></li>
           </ul>
           <br />
         </div>
       </div>
 
+      <!-- 手機版選單 (合併原本重複的部分) -->
       <div id="menu_phone">
         <img class="menu_icon" src="image/menu.svg" onclick="myShowFrame()" />
-        <br />
-        <br />
-        <br />
-      </div>
-
-      <div id="menu_phone">
+        <br /><br /><br />
         <div class="container-fluid">
           <div class="navbar" id="myNavbar">
             <ul class="list-group">
               <li class="list-group-item"><a href="#AITLAB">AITLAB</a></li>
-              <li class="list-group-item">
-                <a href="#RESEARCH_TOPICS">RESEARCH</a>
-              </li>
+              <li class="list-group-item"><a href="#RESEARCH_TOPICS">RESEARCH</a></li>
               <li class="list-group-item"><a href="#MEMBERS2">MEMBERS</a></li>
-              <li class="list-group-item">
-                <a href="#AITLAB_TRELLO">TRELLO</a>
-              </li>
+              <li class="list-group-item"><a href="#AITLAB_TRELLO">TRELLO</a></li>
             </ul>
           </div>
         </div>
@@ -74,202 +61,113 @@
       <script>
         var my_show_frame = document.getElementById("myNavbar");
         function start() {
-          var menu_show_value = true;
-          if (menu_show_value) {
-            my_show_frame.style.display = "none";
-            menu_show_value = false;
-          }
+          my_show_frame.style.display = "none";
         }
-
         start();
         function myShowFrame() {
-          var menu_show_value = my_show_frame.style.display == "none";
-          if (menu_show_value) {
+          if (my_show_frame.style.display === "none") {
             my_show_frame.style.display = "block";
           } else {
             my_show_frame.style.display = "none";
           }
         }
 
-        //Get the button:
-        mybutton = document.getElementById("myBtn");
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () {
-          scrollFunction();
-        };
-
+        // 回到頂端按鈕
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function () { scrollFunction(); };
         function scrollFunction() {
-          if (
-            document.body.scrollTop > 20 ||
-            document.documentElement.scrollTop > 20
-          ) {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             mybutton.style.display = "block";
           } else {
             mybutton.style.display = "none";
           }
         }
-
-        // When the user clicks on the button, scroll to the top of the document
         function topFunction() {
-          document.body.scrollTop = 0; // For Safari
-          document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
         }
       </script>
       
       <div class="container-fluid" style="background-color:#104fb4">
-        <br />
-        <br />
-        <br />
-        <div class ="row align-items-center">
-          <img
-          class="header_img"
-          src="image/logo1_bg.png"
-          class="img-fluid"
-          alt="Responsive image"
-          />
+        <br /><br /><br />
+        <div class="row align-items-center">
+          <img class="header_img img-fluid" src="image/logo1_bg.png" alt="Responsive image" />
         </div>
-        <br />
-        <br />
-        <br />
+        <br /><br /><br />
       </div>
       
       <div class="AITLAB" id="AITLAB">
-        <br />
-        <br />
+        <br /><br />
         <div class="container">
           <div class="CenterFrame01">
             <h1><b>先進資訊技術實驗室</b></h1>
             <h1><b>Advanced Information Technology Laboratory (AIT LAB)</b></h1>
           </div>
-
           <div class="CenterFrame02">
             <br />
-            <b
-              >1. 面對人工智慧與大數據時代的來臨，「先進資訊技術」實驗室將善用雲端運算與大數據分析技術，整合多台異質主機，以有效管理資源並優化計算量分配，進而提升算力，滿足日益增長的數據匯流、處理和分析需求。</b
-            >
-            <br />
-            <br />
-            <b
-              >2. 「先進資訊技術」實驗室將結合人工智慧與元宇宙技術，開發跨領域的一體機設備軟體，並以視覺化方式呈現分析結果，提升數據解讀的效率與準確性。</b
-            >
-            <br />
-            <br />
-            <b
-              >3.  結合上述新興科技技術，實驗室致力於開發智慧型系統，對資料進行匯流、處理與分析，最終透過視覺化呈現，挖掘潛在的重要資訊，為決策提供有效支持。</b
-            >
-            <br />
-            <br />
-            <b
-              >4.  在學生培育方面，「先進資訊技術」實驗室注重專業技能與倫理素養的同步提升，並著力於發掘問題解決能力與團隊合作精神的養成。我們期許學生具備卓越的學術與實務開發能力，並積極參與全國知名資訊專題競賽，投稿國內外學術論文，為學生拓展學術與職涯機遇。</b
-            >
-            <br />
-            <br />
-            <b
-              >5. 「先進資訊技術」實驗室為學生提供參與多元大型實務專案的機會，包括與企業的產學合作專案，以及教育部、國科會等資助的研究計畫。透過這些專案，學生能學習專業的開發實作技能、軟體工程方法及專案開發技術，進一步提升其綜合能力和實務經驗。</b
-            >
-            <br />
-            <br />
+            <b>1. 面對人工智慧與大數據時代的來臨，「先進資訊技術」實驗室將善用雲端運算與大數據分析技術，
+              整合多台異質主機，以有效管理資源並優化計算量分配，進而提升算力，滿足日益增長的數據匯流、處理和分析需求。</b>
+            <br /><br />
+            <b>2. 「先進資訊技術」實驗室將結合人工智慧與元宇宙技術，
+              開發跨領域的一體機設備軟體，並以視覺化方式呈現分析結果，提升數據解讀的效率與準確性。</b>
+            <br /><br />
+            <b>3. 結合上述新興科技技術，實驗室致力於開發智慧型系統，
+              對資料進行匯流、處理與分析，最終透過視覺化呈現，挖掘潛在的重要資訊，為決策提供有效支持。</b>
+            <br /><br />
+            <b>4. 在學生培育方面，「先進資訊技術」實驗室注重專業技能與倫理素養的同步提升，
+              並著力於發掘問題解決能力與團隊合作精神的養成。我們期許學生具備卓越的學術與實務開發能力，
+              並積極參與全國知名資訊專題競賽，投稿國內外學術論文，為學生拓展學術與職涯機遇。</b>
+            <br /><br />
+            <b>5. 「先進資訊技術」實驗室為學生提供參與多元大型實務專案的機會，
+              包括與企業的產學合作專案，以及教育部、國科會等資助的研究計畫。
+              透過這些專案，學生能學習專業的開發實作技能、軟體工程方法及專案開發技術，
+              進一步提升其綜合能力和實務經驗。</b>
+            <br /><br />
           </div>
-          <br />
-          <br />
-
-          <div
-            class="CenterFrame03"
-            style="
-              border-style: outset;
-              border-width: 12px;
-              width: 100%;
-              height: 100%;
-              padding: 3px;
-              text-align: center;
-              background-color: rgba(5, 25, 70, 0.755);
-              border-radius: 15px;
-            "
-          >
-            <span style="color: rgb(245, 145, 90)">
+          <br /><br />
+          <div class="CenterFrame03" style="border: outset 12px; width: 100%; height: 100%; padding: 3px; text-align: center; background-color: rgba(5,25,70,0.755); border-radius: 15px;">
+            <span style="color: rgb(245,145,90)">
               <br />
-
-              <b
-                >鑑於產業界對於先進資訊技術人才的迫切需求，我們熱烈歡迎所有積極學習的學生加入「先進資訊技術」實驗室，與我們攜手探索這些先進資訊技術的未來發展前景。</b
-              >
-
-              <br />
-              <br />
-
-              <b
-                >若有興趣請寄信給 &nbsp;
-                <span style="color: rgb(159, 184, 253)"> "蘇育生教授" </span>
-                &nbsp; ! &nbsp;&nbsp;
-              </b>
-              <a href="mailto:ccucssu@cs.ccu.edu.tw" style="color: white">
-                <b> 蘇育生教授信箱 </b></a
-              >
-
-              <br />
-              <br />
-              <br />
-              <br />
+              <b>鑑於產業界對於先進資訊技術人才的迫切需求，我們熱烈歡迎所有積極學習的學生加入「先進資訊技術」實驗室，
+                與我們攜手探索這些先進資訊技術的未來發展前景。</b>
+              <br /><br />
+              <b>若有興趣請寄信給 <span style="color: rgb(159,184,253)">蘇育生教授</span> !</b>
+              <a href="mailto:ccucssu@cs.ccu.edu.tw" style="color: white"><b> 蘇育生教授信箱 </b></a>
+              <br /><br /><br /><br />
             </span>
           </div>
         </div>
       </div>
-
-      <br />
-      <br />
-      <br />
-
+      
+      <br /><br /><br />
+      
       <div class="RESEARCH_TOPICS" id="RESEARCH_TOPICS">
         <div class="container">
           <div class="row">
             <div class="col-md-9">
-              <br />
-              <br />
+              <br /><br />
               <h1><b>Research Topics</b></h1>
               <br />
-              ● 雲端運算 &nbsp; (Cloud Computing)
-              <br />
-              <br />
-              ● 巨量資料分析 &nbsp;&nbsp; (Big Data Analytics)
-              <br />
-              <br />
-              ● 智慧型系統 &nbsp;&nbsp; (Intelligent System)
-              <br />
-              <br />
-              ● 元宇宙 &nbsp;(Metaverse)
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
+              ● 雲端運算 (Cloud Computing)
+              <br /><br />
+              ● 巨量資料分析 (Big Data Analytics)
+              <br /><br />
+              ● 智慧型系統 (Intelligent System)
+              <br /><br />
+              ● 元宇宙 (Metaverse)
+              <br /><br /><br /><br /><br /><br /><br /><br />
             </div>
-            
             <div class="col-md-3">
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <img src="image/research.png" style="width: 100%; height: 100%">
+              <br /><br /><br /><br /><br /><br /><br /><br /><br />
+              <img src="image/research.png" style="width: 100%; height: 100%" alt="Research Image">
             </div>
-            
           </div>
         </div>
       </div>
-
-      <br />
-      <br />
-      <br />
-
-      <!--電腦版-->
-
+      
+      <br /><br /><br />
+      
+      <!-- 電腦版 Members -->
       <div class="MEMBERS1" id="MEMBERS1">
         <div class="container">
           <div class="CenterFrame">
@@ -278,434 +176,284 @@
             <br />
           </div>
           <br />
-
           <div class="teacher_frame">
             <div class="left_frame">
-              <img
-                src="image/teacher4.png"
-                style="float: right; width: 57.5%; height: 57.5%"
-              />
+              <img src="image/teacher4.png" style="float: right; width: 57.5%; height: 57.5%" alt="Teacher Image" />
             </div>
             <div class="right_frame">
-              <p><b>● 指導教授(Advisor)：</b> </p>
-              <b>　蘇育生 博士(Dr. Yu-Sheng Su) </b>
-              <br />
-              
-              <br />
-              <p>
-                <b>● 服務單位(Service Department)： </b> 
-                <br />
-                <b>　國立中正大學 資訊工程學系暨研究所</b>
+              <p><b>● 指導教授(Advisor)：</b></p>
+              <b>蘇育生 博士 (Dr. Yu-Sheng Su)</b>
+              <br /><br />
+              <p><b>● 服務單位(Service Department)：</b><br />
+                <b>國立中正大學 資訊工程學系暨研究所</b>
               </p>
               <br />
-              <p><b>● 辦公室(Office)：</b> EA513 <b> &nbsp;</b></p>
+              <p><b>● 辦公室(Office)：</b> EA513</p>
               <br />
-              <p><b>● 電話(Extension)：</b> 05-2720411 &nbsp; <b>分機 : </b>33137</p>
+              <p><b>● 電話(Extension)：</b> 05-2720411 <b>分機 :</b> 33137</p>
               <br />
               <p><b>● E-mail：</b>ccucssu@cs.ccu.edu.tw</p>
               <br />
-              <p><b>● Biography : </b></p>
+              <p><b>● Biography :</b></p>
               <br />
-              <p>Dr. Yu-Sheng Su is an associate professor at the Department of Computer Science and Information Engineering, National Chung Cheng University (CCU), Taiwan. Dr. Su earned his Ph.D. degree in the Department of Computer Science and Information Engineering from the National Central University, Taiwan, in 2010. With a strong academic background, Dr. Su has made significant contributions to his field, boasting over 50 journal publications. </p>
+              <p>
+                Dr. Yu-Sheng Su is an associate professor at the Department of Computer Science and Information Engineering,
+                National Chung Cheng University (CCU), Taiwan. He earned his Ph.D. from the National Central University in 2010
+                and has over 50 journal publications.
+              </p>
               <br />
-              <p>Recognized for his outstanding research, Dr. Su has been honored with the best paper award in several prestigious conferences, including the Conference of Engineering, Technological & STEM Education, IIAI International Congress on Advanced Applied Informatics, TANET, among others. </p>
+              <p>
+                Recognized for his outstanding research, Dr. Su has received best paper awards in several prestigious conferences.
+              </p>
               <br />
-              <p>Dr. Su's research interests revolve around cutting-edge technologies, encompassing Cloud Computing, Big Data Analytics, Intelligent Systems, and Metaverse. His dedication to exploring and advancing these fields makes him an invaluable asset to the academic community and the future of information technology.</p>
+              <p>
+                His research interests include Cloud Computing, Big Data Analytics, Intelligent Systems, and Metaverse.
+              </p>
             </div>
           </div>
         </div>
-        <br />
-        <br />
-
+        <br /><br />
         <div class="container">
           <div class="row">
-            <h2 style="color: rgb(30, 50, 180)"><b>研究生</b></h2>
-            <br />
-            <br /> 
+            <h2 style="color: rgb(30,50,180)"><b>研究生</b></h2>
+            <br /><br />
             <div class="col-lg-3">
-              <img src="image/girl.jpg" alt="Cinque Terre"  style="width: 40%; height: 40%"/>
+              <img src="image/girl.jpg" alt="黃欣怡" style="width: 40%; height: 40%" />
               <p>黃欣怡</p>
             </div>
             <div class="col-lg-3">
-              <img src="image/girl.jpg" alt="Cinque Terre"  style="width: 40%; height: 40%" />
+              <img src="image/girl.jpg" alt="許婉瑩" style="width: 40%; height: 40%" />
               <p>許婉瑩</p>
             </div>
             <div class="col-lg-3">
-              <img src="image/girl.jpg" alt="Cinque Terre"  style="width: 40%; height: 40%"/>
+              <img src="image/girl.jpg" alt="洪雅萍" style="width: 40%; height: 40%" />
               <p>洪雅萍</p>
             </div>
             <div class="col-lg-3">
-              <img src="image/boy2.jpg" alt="Cinque Terre" style="width: 40%; height: 40%" />
+              <img src="image/boy2.jpg" alt="許秉洋" style="width: 40%; height: 40%" />
               <p>許秉洋</p>
             </div>
             <div class="col-lg-3">
-              <img src="image/boy2.jpg" alt="Cinque Terre" style="width: 40%; height: 40%" />
+              <img src="image/boy2.jpg" alt="洪瑭璟" style="width: 40%; height: 40%" />
               <p>洪瑭璟</p>
             </div>
             <div class="col-lg-3">
-              <img src="image/boy2.jpg" alt="Cinque Terre"  style="width: 40%; height: 40%"/>
+              <img src="image/boy2.jpg" alt="張詠裕" style="width: 40%; height: 40%" />
               <p>張詠裕</p>
             </div>
             <div class="col-lg-3">
-              <img src="image/boy2.jpg" alt="Cinque Terre"  style="width: 40%; height: 40%"/>
+              <img src="image/boy2.jpg" alt="劉家豪" style="width: 40%; height: 40%" />
               <p>劉家豪</p>
             </div>
             <div class="col-lg-3">
-              <img src="image/girl.jpg" alt="Cinque Terre"  style="width: 40%; height: 40%"/>
+              <img src="image/girl.jpg" alt="王怡文" style="width: 40%; height: 40%" />
               <p>王怡文</p>
             </div>
-
             <div class="col-lg-3">
-              <img src="image/boy2.jpg" alt="Cinque Terre"  style="width: 40%; height: 40%"/>
+              <img src="image/boy2.jpg" alt="黃成祺" style="width: 40%; height: 40%" />
+              <p>黃成祺</p>
+            </div>
+            <div class="col-lg-3">
+              <img src="image/boy2.jpg" alt="林則州" style="width: 40%; height: 40%" />
               <p>林則州</p>
             </div>
             <div class="col-lg-3">
-              <img src="image/boy2.jpg" alt="Cinque Terre"  style="width: 40%; height: 40%"/>
+              <img src="image/boy2.jpg" alt="陳德生" style="width: 40%; height: 40%" />
               <p>陳德生</p>
+            </div>
+            <!-- 修正：補上閉合標籤 -->
             <div class="col-lg-3">
-              <img src="image/pro_hams.png" alt="Cinque Terre"  style="width: 60%; height: 60%"/>
+              <img src="image/pro_hams.png" alt="彭駿浩" style="width: 60%; height: 60%" />
               <p>彭駿浩</p>
             </div>
-            </div>
-            <br />
-            <br />
-            <br />
+            <br /><br /><br />
           </div>
-
           <div class="row">
-            <br />
-            <br />
-            <h2 style="color: rgb(128, 3, 150)"><b>專題生</b></h2>       
+            <br /><br />
+            <h2 style="color: rgb(82,5,78)"><b>專題生</b></h2>
             <div class="col-lg-3">
-              <img src="image/girl.jpg" alt="Cinque Terre" style="width: 40%; height: 40%"/>
+              <img src="image/girl.jpg" alt="黃于恩" style="width: 40%; height: 40%" />
               <p>黃于恩</p>
             </div>
             <div class="col-lg-3">
-              <img src="image/girl.jpg" alt="Cinque Terre" style="width: 40%; height: 40%"/>
+              <img src="image/girl.jpg" alt="袁肇聰" style="width: 40%; height: 40%" />
               <p>袁肇聰</p>
             </div>
             <div class="col-lg-3">
-              <img src="image/boy.jpg" alt="Cinque Terre" style="width: 40%; height: 40%"/>
+              <img src="image/boy.jpg" alt="許世昕" style="width: 40%; height: 40%" />
               <p>許世昕</p>
             </div>
             <div class="col-lg-3">
-              <img src="image/girl.jpg" alt="Cinque Terre" style="width: 40%; height: 40%"/>
+              <img src="image/girl.jpg" alt="葉暄鴻" style="width: 40%; height: 40%" />
               <p>葉暄鴻</p>
             </div>
             <div class="col-lg-3">
-              <img src="image/boy.jpg" alt="Cinque Terre" style="width: 40%; height: 40%"/>
+              <img src="image/boy.jpg" alt="楊詠筌" style="width: 40%; height: 40%" />
               <p>楊詠筌</p>
             </div>
-            <br />
-            <br />
-            <br />
+            <br /><br /><br />
           </div>
         </div>
-
         <div class="container">
           <div class="row">
+            <br /><br />
+            <h3 style="color: rgb(82,5,78)"><b>歷屆畢業研究生</b></h3>
             <br />
-            <br />
-
-            <h3 style="color: rgb(82, 5, 78)"><b>歷屆畢業研究生</b></h3>
-            <br />
-            <div class="col-lg-2">
-              <p>潘沛晴</p>
-            </div>
-            <div class="col-lg-2">
-              <p>羅景騰</p>
-            </div>
-            <div class="col-lg-2">
-              <p>陳柔安</p>
-            </div>
-            <div class="col-lg-2">
-              <p>張嘉容</p>
-            </div>
-            <div class="col-lg-2">
-              <p>陳明欣</p>
-            </div>
-            <div class="col-lg-2">
-              <p>王政鑫</p>
-            </div>
-            <div class="col-lg-2">
-              <p>卓文心</p>
-            </div>
-            <div class="col-lg-2">
-              <p>劉泰全</p>
-            </div>
-            <div class="col-lg-2">
-              <p>胡宇成</p>
-            </div>
-            <div class="col-lg-2">
-              <p>鄭竑瑋</p>
-            </div>
-            <div class="col-lg-2">
-              <p>李佳鴻</p>
-            </div>
-            <div class="col-lg-2">
-              <p>張清堯</p>
-            </div>
-            <div class="col-lg-2">
-              <p>曾玟綾</p>
-            </div>
-            <div class="col-lg-2">
-              <p>吳昀縉</p>
-            </div>
-            <div class="col-lg-2">
-              <p>林昱達</p>
-            </div>
+            <div class="col-lg-2"><p>潘沛晴</p></div>
+            <div class="col-lg-2"><p>羅景騰</p></div>
+            <div class="col-lg-2"><p>陳柔安</p></div>
+            <div class="col-lg-2"><p>張嘉容</p></div>
+            <div class="col-lg-2"><p>陳明欣</p></div>
+            <div class="col-lg-2"><p>王政鑫</p></div>
+            <div class="col-lg-2"><p>卓文心</p></div>
+            <div class="col-lg-2"><p>劉泰全</p></div>
+            <div class="col-lg-2"><p>胡宇成</p></div>
+            <div class="col-lg-2"><p>鄭竑瑋</p></div>
+            <div class="col-lg-2"><p>李佳鴻</p></div>
+            <div class="col-lg-2"><p>張清堯</p></div>
+            <div class="col-lg-2"><p>曾玟綾</p></div>
+            <div class="col-lg-2"><p>吳昀縉</p></div>
+            <div class="col-lg-2"><p>林昱達</p></div>
             <br />
           </div>
           <div class="row">
-            <h3 style="color: rgb(82, 5, 78)"><b>歷屆畢業專題生</b></h3>
+            <h3 style="color: rgb(82,5,78)"><b>歷屆畢業專題生</b></h3>
             <br />
-             <div class="col-lg-2">
-              <p>袁肇聰</p>
-            </div>
-            <div class="col-lg-2">
-              <p>莊翔亦</p>
-            </div>
-            <div class="col-lg-2">
-              <p>黃于恩</p>
-            </div>
-            <div class="col-lg-2">
-              <p>江凱倫</p>
-            </div>
-            <div class="col-lg-2">
-              <p>連承達</p>
-            </div>
-            <div class="col-lg-2">
-              <p>劉政勳</p>
-            </div>
-            <div class="col-lg-2">
-              <p>林易宏</p>
-            </div>
-            <div class="col-lg-2">
-              <p>吳櫂廷</p>
-            </div>
-            <div class="col-lg-2">
-              <p>吳承羲</p>
-            </div>
-            <div class="col-lg-2">
-              <p>陳柏硯</p>
-            </div>
-            <div class="col-lg-2">
-              <p>張馨友</p>
-            </div>
-            <div class="col-lg-2">
-              <p>邱詩閔</p>
-            </div>
-            <div class="col-lg-2">
-              <p>丘菲亞</p>
-            </div>
-            <div class="col-lg-2">
-              <p>張維恒</p>
-            </div>
-            <div class="col-lg-2">
-              <p>王政鑫</p>
-            </div>
-            <div class="col-lg-2">
-              <p>蔡秉翰</p>
-            </div>
-            <div class="col-lg-2">
-              <p>呂佳奇</p>
-            </div>
-            <div class="col-lg-2">
-              <p>馬大衛</p>
-            </div>
-            <div class="col-lg-2">
-              <p>王懷德</p>
-            </div>
-            <div class="col-lg-2">
-              <p>張哲誠</p>
-            </div>
-            <div class="col-lg-2">
-              <p>戴志達</p>
-            </div>
-            <div class="col-lg-2">
-              <p>謝竣宇</p>
-            </div>
-            <div class="col-lg-2">
-              <p>梁膺聰</p>
-            </div>
-            <div class="col-lg-2">
-              <p>謝翔宇</p>
-            </div>
-            <div class="col-lg-2">
-              <p>朱河玲</p>
-            </div>
-            <div class="col-lg-2">
-              <p>彭新祥</p>
-            </div>
-            <div class="col-lg-2">
-              <p>陳柏廷</p>
-            </div>
-            <div class="col-lg-2">
-              <p>蘇沂</p>
-            </div>
-            <div class="col-lg-2">
-              <p>揚研茂</p>
-            </div>
-            <div class="col-lg-2">
-              <p>徐明宏</p>
-            </div>
+            <div class="col-lg-2"><p>袁肇聰</p></div>
+            <div class="col-lg-2"><p>莊翔亦</p></div>
+            <div class="col-lg-2"><p>黃于恩</p></div>
+            <div class="col-lg-2"><p>江凱倫</p></div>
+            <div class="col-lg-2"><p>連承達</p></div>
+            <div class="col-lg-2"><p>劉政勳</p></div>
+            <div class="col-lg-2"><p>林易宏</p></div>
+            <div class="col-lg-2"><p>吳櫂廷</p></div>
+            <div class="col-lg-2"><p>吳承羲</p></div>
+            <div class="col-lg-2"><p>陳柏硯</p></div>
+            <div class="col-lg-2"><p>張馨友</p></div>
+            <div class="col-lg-2"><p>邱詩閔</p></div>
+            <div class="col-lg-2"><p>丘菲亞</p></div>
+            <div class="col-lg-2"><p>張維恒</p></div>
+            <div class="col-lg-2"><p>王政鑫</p></div>
+            <div class="col-lg-2"><p>蔡秉翰</p></div>
+            <div class="col-lg-2"><p>呂佳奇</p></div>
+            <div class="col-lg-2"><p>馬大衛</p></div>
+            <div class="col-lg-2"><p>王懷德</p></div>
+            <div class="col-lg-2"><p>張哲誠</p></div>
+            <div class="col-lg-2"><p>戴志達</p></div>
+            <div class="col-lg-2"><p>謝竣宇</p></div>
+            <div class="col-lg-2"><p>梁膺聰</p></div>
+            <div class="col-lg-2"><p>謝翔宇</p></div>
+            <div class="col-lg-2"><p>朱河玲</p></div>
+            <div class="col-lg-2"><p>彭新祥</p></div>
+            <div class="col-lg-2"><p>陳柏廷</p></div>
+            <div class="col-lg-2"><p>蘇沂</p></div>
+            <div class="col-lg-2"><p>揚研茂</p></div>
+            <div class="col-lg-2"><p>徐明宏</p></div>
             <br />
           </div>
         </div>
-
-        <!-- <div class = back_top>
-
-                <a href= "#menu" target="_self" style="color: rgb(110, 10, 100);"> <b>● TOP ●</b> </a>
-
-
-            </div> -->
       </div>
-
-      <!--手機版本-->
-
+      
+      <!-- 手機版 Members -->
       <div class="MEMBERS2" id="MEMBERS2">
         <div class="container">
           <div class="CenterFrame">
             <h3><b>Members</b></h3>
           </div>
+          <br /><br />
+          <img src="image/teacher4.png" style="width: 100%; height: 100%" alt="Teacher" />
+          <br /><br /><br />
+          <p><b>● 指導教授(Advisor)：</b> <b>蘇育生 (Dr. Yu-Sheng Su)</b></p>
           <br />
+          <p><b>● 服務單位 (Service Department):</b> <b>國立中正大學 資訊工程學系暨研究所</b></p>
           <br />
-
-          <img src="image/teacher4.png" style="width: 100%; height: 100%" />
+          <p><b>● 辦公室(Office)：</b> EA513</p>
           <br />
-          <br />
-          <br />
-          <p><b>● 指導教授(Advisor)：</b> <b>蘇育生 &nbsp; &nbsp; (Dr. Yu-Sheng Su) </b></p>
-          <br />
-          <p><b>● 服務單位 (Service Department): </b> &nbsp;<b>國立中正大學 資訊工程學系暨研究所</b></p>
-          <br />
-          <p><b>● 辦公室(Office)：</b> EA513 <b> &nbsp; </b></p>
-          <br />
-          <p><b>● 電話(Extension)：</b> 05-2720411 &nbsp; <b>分機 : </b>33137</p>
+          <p><b>● 電話(Extension)：</b> 05-2720411 <b>分機 :</b> 33137</p>
           <br />
           <p><b>● E-mail：</b>ccucssu@cs.ccu.edu.tw</p>
           <br />
-          <p><b>● Biography : </b></p>
+          <p><b>● Biography :</b></p>
           <br />
           <p>
-           Dr. Yu-Sheng Su is an associate professor at the Department of Computer Science and  Information Engineering, National Chung Cheng University (CCU), Taiwan. Dr. Su earned his Ph.D. degree in the Department of Computer Science and Information Engineering from the National Central University, Taiwan, in 2010.With a strong academic background, Dr. Su has made significant contributions to his field, boasting  over 50 journal publications. 
+            Dr. Yu-Sheng Su is an associate professor at the Department of Computer Science and Information Engineering,
+            National Chung Cheng University (CCU), Taiwan. He earned his Ph.D. from the National Central University in 2010
+            and has over 50 journal publications.
           </p>
           <br />
           <p>
-              Recognized for his outstanding research, Dr. Su has been honored with the best paper award in several prestigious conferences, including the Conference of Engineering, Technological & STEM Education, IIAI International Congress on Advanced Applied Informatics, TANET, among others. 
-            </p>
+            Recognized for his outstanding research, Dr. Su has received best paper awards in several prestigious conferences.
+          </p>
           <br />
           <p>
-            Dr. Su's research interests revolve around cutting-edge technologies, encompassing Cloud Computing, Big Data Analytics, Intelligent Systems, and Metaverse. His dedication to exploring and advancing these fields makes him an invaluable asset to the academic community and the future of information technology.
+            His research interests include Cloud Computing, Big Data Analytics, Intelligent Systems, and Metaverse.
           </p>
           <br />
           <div class="CenterFrame">
             <h3>研究生</h3>
-            <img src="image/gura.gif" alt="Cinque Terre" style="width: 30%; height: 30%"/>
+            <img src="image/gura.gif" alt="羅景騰" style="width: 30%; height: 30%" />
             <p>羅景騰</p>
-            <p></p>
-            <br />
-            <br />
-            <img src="image/pei1.png" alt="Cinque Terre" />
+            <br /><br />
+            <img src="image/pei1.png" alt="潘沛晴" />
             <p>潘沛晴</p>
-            <p></p>
-            <br />
-            <br />
-            <img src="image/jou1.jpg" alt="Cinque Terre" />
+            <br /><br />
+            <img src="image/jou1.jpg" alt="陳柔安" />
             <p>陳柔安</p>
-            <p></p>
-            <br />
-            <br />
-            <img src="image/金魚草.jpg" alt="Cinque Terre"  style="width: 30%; height: 30%" />
+            <br /><br />
+            <img src="image/金魚草.jpg" alt="張嘉容" style="width: 30%; height: 30%" />
             <p>張嘉容</p>
-            <p></p>
-            <br />
-            <br />
-
-            <img src="image/boy8.jpg" alt="Cinque Terre" />
+            <br /><br />
+            <img src="image/boy8.jpg" alt="彭駿浩" />
             <p>彭駿浩</p>
-            <p></p>
-            <br />
-            <br />
-            <img src="image/girl.jpg" alt="Cinque Terre" />
+            <br /><br />
+            <img src="image/girl.jpg" alt="許婉瑩" />
             <p>許婉瑩</p>
-            <p></p>
-            <br />
-            <br />
-            <img src="image/girl.jpg" alt="Cinque Terre" />
+            <br /><br />
+            <img src="image/girl.jpg" alt="洪雅萍" />
             <p>洪雅萍</p>
-            <p></p>
-            <br />
-            <br />
-            <img src="image/boy8.jpg" alt="Cinque Terre" />
+            <br /><br />
+            <img src="image/boy8.jpg" alt="張詠裕" />
             <p>張詠裕</p>
-            <p></p>
-            <br />
-            <br />
-            <img src="image/boy8.jpg" alt="Cinque Terre" />
+            <br /><br />
+            <img src="image/boy8.jpg" alt="洪瑭璟" />
             <p>洪瑭璟</p>
-            <p></p>
-            <br />
-            <br />
-            <img src="image/girl2.jpg" alt="Cinque Terre" />
+            <br /><br />
+            <img src="image/girl2.jpg" alt="黃欣怡" />
             <p>黃欣怡</p>
-            <p></p>
-            <br />
-            <br />
-            <img src="image/boy8.jpg" alt="Cinque Terre" />
+            <br /><br />
+            <img src="image/boy8.jpg" alt="許秉洋" />
             <p>許秉洋</p>
-            <p></p>
-            <br />
-            <br />
-            <img src="image/boy8.jpg" alt="Cinque Terre" />
+            <br /><br />
+            <img src="image/boy8.jpg" alt="劉家豪" />
             <p>劉家豪</p>
-            <p></p>
-            <br />
-            <br />
-            <img src="image/girl2.jpg" alt="Cinque Terre" />
+            <br /><br />
+            <img src="image/girl2.jpg" alt="王怡文" />
             <p>王怡文</p>
-            <p></p>
-            <br />
-            <br />
+            <br /><br />
             <h3>專題生</h3>
-            <img src="image/boy.jpg" alt="Cinque Terre" />
+            <img src="image/boy.jpg" alt="江凱倫" />
             <p>江凱倫</p>
-            <p></p>
-            <br />
-            <br />
-            <img src="image/boy.jpg" alt="Cinque Terre" />
+            <br /><br />
+            <img src="image/boy.jpg" alt="連承達" />
             <p>連承達</p>
-            <p></p>
-            <br />
-            <br />
-            <img src="image/boy.jpg" alt="Cinque Terre" />
+            <br /><br />
+            <img src="image/boy.jpg" alt="鍾偉生" />
             <p>鍾偉生</p>
-            <p></p>
-            <br />
-            <br />
-            <img src="image/boy.jpg" alt="Cinque Terre" />
+            <br /><br />
+            <img src="image/boy.jpg" alt="黃志強" />
             <p>黃志強</p>
-            <p></p>
-            <br />
-            <br />
-            <img src="image/boy.jpg" alt="Cinque Terre" />
+            <br /><br />
+            <img src="image/boy.jpg" alt="葉常新" />
             <p>葉常新</p>
-            <p></p>
-            <br />
-            <br />
-            <img src="image/boy.jpg" alt="Cinque Terre" />
+            <br /><br />
+            <img src="image/boy.jpg" alt="袁肇聰" />
             <p>袁肇聰</p>
-            <p></p>
-            <br />
-            <br />
-            <img src="image/girl.jpg" alt="Cinque Terre" />
+            <br /><br />
+            <img src="image/girl.jpg" alt="劉展喬" />
             <p>劉展喬</p>
-            <p></p>
-            <br />
-            <br />
+            <br /><br />
           </div>
         </div>
-
         <div class="container">
           <h3>畢業研究生</h3>
           <p>羅景騰</p>
@@ -745,28 +493,19 @@
           <p>徐明宏</p>
         </div>
       </div>
-
-      <br />
-      <br />
-
+      
+      <br /><br />
+      
       <div class="AITLAB_TRELLO" id="AITLAB_TRELLO">
-        <br />
-        <br />
-
+        <br /><br />
         <h3><b>Taiga</b></h3>
-        <br />
-        <br />
-        <br />
+        <br /><br /><br />
         <a href="subsidence.tw:20443">
-          <img src="./image/trello.jpg" style="width: 50%; height: 50%" />
+          <img src="./image/trello.jpg" style="width: 50%; height: 50%" alt="Trello" />
         </a>
-
-        <br />
-        <br />
-        <br />
-        <br />
+        <br /><br /><br /><br />
       </div>
-
+      
       <div class="footer">
         <br />
         <div class="container">
