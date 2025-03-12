@@ -24,6 +24,77 @@
 
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="image/favicon.ico" type="image/x-icon" />
+    
+    <style>
+      /* Added CSS to fix spacing issues */
+      .student-grid {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+      .student-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25%; /* 4 students per row */
+        margin-bottom: 20px;
+      }
+      
+      @media (max-width: 991px) {
+        .student-item {
+          width: 33.33%; /* 3 students per row on medium screens */
+        }
+      }
+      
+      @media (max-width: 767px) {
+        .student-item {
+          width: 50%; /* 2 students per row on small screens */
+        }
+      }
+      
+      /* For the graduated students section */
+      .graduate-list {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+      .graduate-item {
+        width: 16.66%;
+        margin-bottom: 10px;
+      }
+      
+      @media (max-width: 991px) {
+        .graduate-item {
+          width: 25%;
+        }
+      }
+      
+      @media (max-width: 767px) {
+        .graduate-item {
+          width: 33.33%;
+        }
+      }
+      
+      /* Top button styling */
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: #104fb4;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 10px;
+      }
+      
+      #myBtn:hover {
+        background-color: #0d3d8a;
+      }
+    </style>
   </head>
   <body>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
@@ -214,141 +285,147 @@
         </div>
         <br /><br />
         <div class="container">
-          <div class="row">
-            <h2 style="color: rgb(30,50,180)"><b>研究生</b></h2>
-            <br /><br />
-            <div class="col-lg-3">
+          <!-- Modified section with new layout -->
+          <h2 style="color: rgb(30,50,180)"><b>研究生</b></h2>
+          <br />
+          <!-- Switched to flexbox layout -->
+          <div class="student-grid">
+            <!-- Each student is now in a flex item -->
+            <div class="student-item">
               <img src="image/girl.jpg" alt="黃欣怡" style="width: 40%; height: 40%" />
               <p>黃欣怡</p>
             </div>
-            <div class="col-lg-3">
+            <div class="student-item">
               <img src="image/girl.jpg" alt="許婉瑩" style="width: 40%; height: 40%" />
               <p>許婉瑩</p>
             </div>
-            <div class="col-lg-3">
+            <div class="student-item">
               <img src="image/girl.jpg" alt="洪雅萍" style="width: 40%; height: 40%" />
               <p>洪雅萍</p>
             </div>
-            <div class="col-lg-3">
+            <div class="student-item">
               <img src="image/boy2.jpg" alt="許秉洋" style="width: 40%; height: 40%" />
               <p>許秉洋</p>
             </div>
-            <div class="col-lg-3">
+            <div class="student-item">
               <img src="image/boy2.jpg" alt="洪瑭璟" style="width: 40%; height: 40%" />
               <p>洪瑭璟</p>
             </div>
-            <div class="col-lg-3">
+            <div class="student-item">
               <img src="image/boy2.jpg" alt="張詠裕" style="width: 40%; height: 40%" />
               <p>張詠裕</p>
             </div>
-            <div class="col-lg-3">
+            <div class="student-item">
               <img src="image/boy2.jpg" alt="劉家豪" style="width: 40%; height: 40%" />
               <p>劉家豪</p>
             </div>
-            <div class="col-lg-3">
+            <div class="student-item">
               <img src="image/girl.jpg" alt="王怡文" style="width: 40%; height: 40%" />
               <p>王怡文</p>
             </div>
-            <div class="col-lg-3">
+            <div class="student-item">
               <img src="image/boy2.jpg" alt="黃成祺" style="width: 40%; height: 40%" />
               <p>黃成祺</p>
             </div>
-            <div class="col-lg-3">
+            <div class="student-item">
               <img src="image/boy2.jpg" alt="林則州" style="width: 40%; height: 40%" />
               <p>林則州</p>
             </div>
-            <div class="col-lg-3">
+            <div class="student-item">
               <img src="image/boy2.jpg" alt="陳德生" style="width: 40%; height: 40%" />
               <p>陳德生</p>
             </div>
-            <div class="col-lg-3">
+            <div class="student-item">
               <img src="image/pro_hams.png" alt="彭駿浩" style="width: 60%; height: 60%" />
               <p>彭駿浩</p>
             </div>
-            <br /><br /><br />
           </div>
-          <div class="row">
-            <br /><br />
-            <h2 style="color: rgb(82,5,78)"><b>專題生</b></h2>
-            <div class="col-lg-3">
+          <br /><br />
+          
+          <h2 style="color: rgb(82,5,78)"><b>專題生</b></h2>
+          <br />
+          <!-- Applied same layout for 專題生 -->
+          <div class="student-grid">
+            <div class="student-item">
               <img src="image/girl.jpg" alt="黃于恩" style="width: 40%; height: 40%" />
               <p>黃于恩</p>
             </div>
-            <div class="col-lg-3">
+            <div class="student-item">
               <img src="image/girl.jpg" alt="袁肇聰" style="width: 40%; height: 40%" />
               <p>袁肇聰</p>
             </div>
-            <div class="col-lg-3">
+            <div class="student-item">
               <img src="image/boy.jpg" alt="許世昕" style="width: 40%; height: 40%" />
               <p>許世昕</p>
             </div>
-            <div class="col-lg-3">
+            <div class="student-item">
               <img src="image/girl.jpg" alt="葉暄鴻" style="width: 40%; height: 40%" />
               <p>葉暄鴻</p>
             </div>
-            <div class="col-lg-3">
+            <div class="student-item">
               <img src="image/boy.jpg" alt="楊詠筌" style="width: 40%; height: 40%" />
               <p>楊詠筌</p>
             </div>
-            <br /><br /><br />
           </div>
         </div>
+        <br /><br />
+        
         <div class="container">
-          <div class="row">
-            <br /><br />
-            <h3 style="color: rgb(82,5,78)"><b>歷屆畢業研究生</b></h3>
-            <br />
-            <div class="col-lg-2"><p>潘沛晴</p></div>
-            <div class="col-lg-2"><p>羅景騰</p></div>
-            <div class="col-lg-2"><p>陳柔安</p></div>
-            <div class="col-lg-2"><p>張嘉容</p></div>
-            <div class="col-lg-2"><p>陳明欣</p></div>
-            <div class="col-lg-2"><p>王政鑫</p></div>
-            <div class="col-lg-2"><p>卓文心</p></div>
-            <div class="col-lg-2"><p>劉泰全</p></div>
-            <div class="col-lg-2"><p>胡宇成</p></div>
-            <div class="col-lg-2"><p>鄭竑瑋</p></div>
-            <div class="col-lg-2"><p>李佳鴻</p></div>
-            <div class="col-lg-2"><p>張清堯</p></div>
-            <div class="col-lg-2"><p>曾玟綾</p></div>
-            <div class="col-lg-2"><p>吳昀縉</p></div>
-            <div class="col-lg-2"><p>林昱達</p></div>
-            <br />
+          <h3 style="color: rgb(82,5,78)"><b>歷屆畢業研究生</b></h3>
+          <br />
+          <!-- Updated graduated students section to use flexbox -->
+          <div class="graduate-list">
+            <div class="graduate-item"><p>潘沛晴</p></div>
+            <div class="graduate-item"><p>羅景騰</p></div>
+            <div class="graduate-item"><p>陳柔安</p></div>
+            <div class="graduate-item"><p>張嘉容</p></div>
+            <div class="graduate-item"><p>陳明欣</p></div>
+            <div class="graduate-item"><p>王政鑫</p></div>
+            <div class="graduate-item"><p>卓文心</p></div>
+            <div class="graduate-item"><p>劉泰全</p></div>
+            <div class="graduate-item"><p>胡宇成</p></div>
+            <div class="graduate-item"><p>鄭竑瑋</p></div>
+            <div class="graduate-item"><p>李佳鴻</p></div>
+            <div class="graduate-item"><p>張清堯</p></div>
+            <div class="graduate-item"><p>曾玟綾</p></div>
+            <div class="graduate-item"><p>吳昀縉</p></div>
+            <div class="graduate-item"><p>林昱達</p></div>
           </div>
-          <div class="row">
-            <h3 style="color: rgb(82,5,78)"><b>歷屆畢業專題生</b></h3>
-            <br />
-            <div class="col-lg-2"><p>袁肇聰</p></div>
-            <div class="col-lg-2"><p>莊翔亦</p></div>
-            <div class="col-lg-2"><p>黃于恩</p></div>
-            <div class="col-lg-2"><p>江凱倫</p></div>
-            <div class="col-lg-2"><p>連承達</p></div>
-            <div class="col-lg-2"><p>劉政勳</p></div>
-            <div class="col-lg-2"><p>林易宏</p></div>
-            <div class="col-lg-2"><p>吳櫂廷</p></div>
-            <div class="col-lg-2"><p>吳承羲</p></div>
-            <div class="col-lg-2"><p>陳柏硯</p></div>
-            <div class="col-lg-2"><p>張馨友</p></div>
-            <div class="col-lg-2"><p>邱詩閔</p></div>
-            <div class="col-lg-2"><p>丘菲亞</p></div>
-            <div class="col-lg-2"><p>張維恒</p></div>
-            <div class="col-lg-2"><p>王政鑫</p></div>
-            <div class="col-lg-2"><p>蔡秉翰</p></div>
-            <div class="col-lg-2"><p>呂佳奇</p></div>
-            <div class="col-lg-2"><p>馬大衛</p></div>
-            <div class="col-lg-2"><p>王懷德</p></div>
-            <div class="col-lg-2"><p>張哲誠</p></div>
-            <div class="col-lg-2"><p>戴志達</p></div>
-            <div class="col-lg-2"><p>謝竣宇</p></div>
-            <div class="col-lg-2"><p>梁膺聰</p></div>
-            <div class="col-lg-2"><p>謝翔宇</p></div>
-            <div class="col-lg-2"><p>朱河玲</p></div>
-            <div class="col-lg-2"><p>彭新祥</p></div>
-            <div class="col-lg-2"><p>陳柏廷</p></div>
-            <div class="col-lg-2"><p>蘇沂</p></div>
-            <div class="col-lg-2"><p>揚研茂</p></div>
-            <div class="col-lg-2"><p>徐明宏</p></div>
-            <br />
+          
+          <h3 style="color: rgb(82,5,78)"><b>歷屆畢業專題生</b></h3>
+          <br />
+          <!-- Updated graduated project students section to use flexbox -->
+          <div class="graduate-list">
+            <div class="graduate-item"><p>袁肇聰</p></div>
+            <div class="graduate-item"><p>莊翔亦</p></div>
+            <div class="graduate-item"><p>黃于恩</p></div>
+            <div class="graduate-item"><p>江凱倫</p></div>
+            <div class="graduate-item"><p>連承達</p></div>
+            <div class="graduate-item"><p>劉政勳</p></div>
+            <div class="graduate-item"><p>林易宏</p></div>
+            <div class="graduate-item"><p>吳櫂廷</p></div>
+            <div class="graduate-item"><p>吳承羲</p></div>
+            <div class="graduate-item"><p>陳柏硯</p></div>
+            <div class="graduate-item"><p>張馨友</p></div>
+            <div class="graduate-item"><p>邱詩閔</p></div>
+            <div class="graduate-item"><p>丘菲亞</p></div>
+            <div class="graduate-item"><p>張維恒</p></div>
+            <div class="graduate-item"><p>王政鑫</p></div>
+            <div class="graduate-item"><p>蔡秉翰</p></div>
+            <div class="graduate-item"><p>呂佳奇</p></div>
+            <div class="graduate-item"><p>馬大衛</p></div>
+            <div class="graduate-item"><p>王懷德</p></div>
+            <div class="graduate-item"><p>張哲誠</p></div>
+            <div class="graduate-item"><p>戴志達</p></div>
+            <div class="graduate-item"><p>謝竣宇</p></div>
+            <div class="graduate-item"><p>梁膺聰</p></div>
+            <div class="graduate-item"><p>謝翔宇</p></div>
+            <div class="graduate-item"><p>朱河玲</p></div>
+            <div class="graduate-item"><p>彭新祥</p></div>
+            <div class="graduate-item"><p>陳柏廷</p></div>
+            <div class="graduate-item"><p>蘇沂</p></div>
+            <div class="graduate-item"><p>揚研茂</p></div>
+            <div class="graduate-item"><p>徐明宏</p></div>
           </div>
         </div>
       </div>
